@@ -2,7 +2,7 @@ from pathlib import Path
 
 from prettytable import PrettyTable
 
-from file_connector import JSONConnector
+from file_connector.json_conncetor import JSONConnector
 from file_connector.base_connector import FileConnector
 from src.api_clients import HeadHunterAPI
 from src.api_clients.base_client import VacancyApiClient
@@ -54,7 +54,6 @@ def main():
             callback()
         elif user_input == '0':
             break
-
 
 
 if __name__ == '__main__':
