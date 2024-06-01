@@ -29,7 +29,7 @@ def foo():
 
 def bar():
     vacancies = json_connector.get_vacancies()
-    t = PrettyTable(['Имя'], ['Ссылка'], ['Название компании'], ['Зарплата'])
+    t = PrettyTable(['Имя', 'Ссылка', 'Название компании', 'Зарплата'])
     for vac in sorted(vacancies, key=lambda x: x.salary, reverse=True)[:10]:
         salary = '{_from} -> {_to}, {currency}'.format(
             _from=vac.salary.salary_from or 0,
@@ -40,7 +40,10 @@ def bar():
     print(t)
 
 
-MAPPING = {1: foo, 2: bar}
+MAPPING = {
+    '1': foo,
+    '2': bar,
+}
 
 
 def main():
