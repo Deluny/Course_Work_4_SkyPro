@@ -58,6 +58,6 @@ class JSONConnector(FileConnector):
             salary=Salary(
                 salary_from=data['salary']['from'],
                 salary_to=data['salary']['to'],
-                currency=data['currency']
+                currency=data['salary']['currency']
             )
         )
